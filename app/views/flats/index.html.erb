@@ -1,0 +1,18 @@
+
+
+<div class="container">
+  <h1>Flats</h1>
+      <div class="d-flex flex-row" >
+      <% @flats.each do |flat| %>
+        <div class="col-4">
+          <ul class= "card p-4">
+            <li><%= flat.name %></li>
+            <li><%= flat.description %></li>
+            <li><%= flat.number_of_guests %></li>
+            <li><%= flat.price_per_night %></li>
+          <%= link_to 'More info', flat_path(@flats), class: "primary" %>
+          </ul>
+        </div>
+      <% end %>
+      </div>
+</div>
